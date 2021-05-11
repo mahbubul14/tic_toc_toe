@@ -1,18 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Tic Tac Toe
 
-> One paragraph statement about the project.
+> OOP (Object oriented programming).
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+In this project we put into practice main concepts of object oriented programming.
 
 ## Built With
 
 - Ruby
-- Frameworks
-- Technologies used
 
 
 
@@ -25,31 +21,25 @@ To get a local copy up and running follow these simple example steps:
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- For usage ensure you have ruby installed
 
-### Setup
 
 ### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Ruby 
+- Code-editor
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- GitHub: [githubhandle](https://github.com/githubhandle)
+- Twitter: [twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 👤 **Oni Olajumoke Priscilla**
 
-- [@githubhandle](https://github.com/prolajumokeoni)
-- [@twitterhandle](https://twitter.com/prolajumokeoni)
+- [githubhandle](https://github.com/prolajumokeoni)
+- [twitterhandle](https://twitter.com/prolajumokeoni)
 - [LinkedIn](https://www.linkedin.com/in/olajumoke-priscilla-oni-44a48b162/)
 
 ## 🤝 Contributing

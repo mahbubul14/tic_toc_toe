@@ -1,2 +1,12 @@
 #!/usr/bin/env ruby
-puts 'Hello world'
+puts 'Welcome to Tic Tac Toe games'
+def player_name
+    puts 'Enter player 1 name:'
+    name = gets.chomp()
+    puts 'Enter player 2 name:'
+    name = gets.chomp()
+end
+player_name
+
+    puts 'lets start the game!'
+    puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "

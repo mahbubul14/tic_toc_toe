@@ -10,8 +10,6 @@ In this project we put into practice main concepts of object oriented programmin
 
 - Ruby
 
-
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
@@ -30,11 +28,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mahbub Alam**
 
-- GitHub: [githubhandle](https://github.com/githubhandle)
-- Twitter: [twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/mahbubul14/)
+- Twitter: [@twitterhandle](https://twitter.com/MahbubA10454419)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahbubul-alam-20595/)
 
 👤 **Oni Olajumoke Priscilla**
 

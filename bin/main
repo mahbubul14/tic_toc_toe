@@ -1,21 +1,22 @@
 #!/usr/bin/env ruby
 puts 'Welcome to Tic Tac Toe games'
-    puts "Enter player 1 name:" #{name_1}
-    name_1 = gets.chomp #{name_1}
-    puts "Enter player 2 name:" #{name_2}
-    name_2 = gets.chomp #{name_2}
-    puts "#{name_1} will play with x and #{name_2} with 0"
+puts 'Enter player 1 name:' #{name_1}
+name_1 = gets.chomp #{name_2}
 
- 
-    puts 'lets start the game!'
-    puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
+puts 'Enter player 2 name:' #{name_2}
+name_2 = gets.chomp #{name_2}
 
-  puts "#{name_1} starts the game"
+puts "#{name_1} will play with x and #{name_2} with 0"
 
-  puts "select an available cell from board"
-  board_game = gets.chomp #{board}
+puts 'lets start the game!'
+puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
 
-  puts "#{name_2} Its your turn"
+puts "#{name_1} starts the game"
 
-  puts "select an available cell from board"
-  board_game = gets.chomp #{board}
+puts 'select an available cell from board'
+board_game = gets.chomp #{board}
+
+puts "#{name_2} Its your turn"
+
+puts 'select an available cell from board'
+board_game = gets.chomp # {board}

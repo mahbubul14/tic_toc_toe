@@ -13,8 +13,8 @@ puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+-
 
 puts "#{one} starts the game"
 
-puts 'select an available cell from board'
 board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+puts 'select an available cell from board'
 number = gets.chomp.to_f
 until board.include? (number)
     puts "invalid move. Please enter a number from 1-9"
@@ -25,7 +25,6 @@ puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+-
 puts "#{two} Its your turn"
 
 puts 'select an available cell from board'
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 number = gets.chomp.to_f
 until board.include? (number)
     puts "invalid move. Please enter a number from 1-9"

@@ -1,24 +1,30 @@
 #!/usr/bin/env ruby
 puts 'Welcome to Tic Tac Toe games'
-begin
-  puts 'Enter Player 1 name: '
-  one = gets.chomp.capitalize
-  puts ''
-  raise StandardError, one if one.length < 3
-rescue StandardError => e
-  puts "Invalid name \"#{e}\". Your username should have at least 3 characters and  must not contain digits"
-  puts ''
-  retry
-end
-begin
-  puts 'Enter Player 2 name: '
-  two = gets.chomp.capitalize
-  puts ''
-  raise StandardError, one if two.length < 3
-rescue StandardError => e
-  puts "Invalid name \"#{e}\". Your username should have at least 3 characters and  must not contain digits"
-  puts ''
-  retry
+
+puts 'Enter Player 1 name: '
+one = gets.strip.chomp.capitalize
+    if one.empty?
+        print 'You can\'t leave this empty. Please, enter you name '
+        one = gets.chomp
+    elsif one.length <3
+        print 'Name should be 3 words at least '
+        one = gets.chomp
+    elsif one.to_i.to_s.eql? one
+        print 'Only plain character no number'
+        one = gets.chomp
+    end
+
+puts 'Enter Player 2 name: '
+two = gets.strip.chomp.capitalize
+if two.empty?
+    print 'You can\'t leave this empty. Please, enter you name '
+    two = gets.chomp
+elsif two.length <3
+    print 'Name should be 3 words at least '
+    two = gets.chomp
+elsif two.to_i.to_s.eql? two
+    print 'Only plain character no number'
+    two = gets.chomp
 end
 
 puts "#{one} will play with x and #{two} with 0"

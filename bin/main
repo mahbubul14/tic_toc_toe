@@ -3,65 +3,65 @@ puts 'Welcome to Tic Tac Toe games'
 
 puts 'Enter Player 1 name: '
 one = gets.strip.chomp.capitalize
-    if one.empty?
-        puts 'You can\'t leave this empty. Please, enter you name: '
-        one = gets.chomp
-    elsif one.length <3
-        puts 'Name should be 3 words at least: '
-        one = gets.chomp
-    elsif one.to_i.to_s.eql? one
-        puts 'Only text no number:'
-        one = gets.chomp
-    end
+if one.empty?
+  puts 'You can\'t leave this empty. Please, enter you name: '
+  one = gets.chomp
+elsif one.length < 3
+  puts 'Name should be 3 words at least: '
+  one = gets.chomp
+elsif one.to_i.to_s.eql? one
+  puts 'Only text no number:'
+  one = gets.chomp
+end
 
 puts 'Enter Player 2 name: '
 two = gets.strip.chomp.capitalize
 if two.empty?
-    puts 'You can\'t leave this empty. Please, enter you name: '
-    two = gets.chomp
-elsif two.length <3
-    puts 'Name should be 3 words at least: '
-    two = gets.chomp
+  puts 'You can\'t leave this empty. Please, enter you name: '
+  two = gets.chomp
+elsif two.length < 3
+  puts 'Name should be 3 words at least: '
+  two = gets.chomp
 elsif two.to_i.to_s.eql? two
-    puts 'Only text no number:'
-    two = gets.chomp
+  puts 'Only text no number:'
+  two = gets.chomp
 end
 
 puts "#{one} will play with x and #{two} with 0"
 
 puts 'lets start the game!'
-puts box = "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
+puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
 
 puts "#{one} starts the game"
 
 board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 puts 'select an available cell from board'
 number = gets.chomp.to_i
-until board.include? (number)
-    puts "invalid move. Please enter a number from 1-9"
-    number = gets.chomp.to_i
+until board.include?(number)
+  puts 'invalid move. Please enter a number from 1-9'
+  number = gets.chomp.to_i
 end
 
-puts box = "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
+puts "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 | \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
 puts "#{two} Its your turn"
 
 puts 'select an available cell from board'
 number = gets.chomp.to_i
-until board.include? (number)
-    puts "invalid move. Please enter a number from 1-9"
-    number = gets.chomp.to_i
+until board.include?(number)
+  puts 'invalid move. Please enter a number from 1-9'
+  number = gets.chomp.to_i
 end
 
 i = 9
 while i <= 9
-    i += 1
-    puts box
-    puts count = gets.chomp.to_i
-    if count.odd?
-        puts 'Game over!'
-        puts "The winner is #{one} !"
-    elsif count.even?
-        puts 'Game over!'
-        puts "The winner is #{two} !"
-    end
+  i += 1
+  puts box
+  puts count = gets.chomp.to_i
+  if count.odd?
+    puts 'Game over!'
+    puts "The winner is #{one} !"
+  elsif count.even?
+    puts 'Game over!'
+    puts "The winner is #{two} !"
+  end
 end

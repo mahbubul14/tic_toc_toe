@@ -32,7 +32,7 @@ puts "#{one} will play with x and #{two} with 0"
 puts 'lets start the game!'
 
 puts box = "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 |
- \n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
+\n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
 
 puts "#{one} starts the game"
 
@@ -56,14 +56,15 @@ end
 
 i = 9
 while i <= 9
-  i += 1
   puts box
   puts count = gets.chomp.to_i
-  if count.odd?
+  if ([1, 2, 3].include? count)
     puts 'Game over!'
     puts "The winner is #{one} !"
-  elsif count.even?
-    puts 'Game over!'
+  elsif ([4, 5, 6].include? count)
     puts "The winner is #{two} !"
+  else
+    puts "It's tie! \n Game over"
   end
+  i += 1
 end

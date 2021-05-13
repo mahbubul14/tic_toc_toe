@@ -33,14 +33,22 @@ puts "#{one} will play with x and #{two} with 0"
 
 puts 'lets start the game!'
 
+
+
 display_board = Game.new
+
 puts display_board.display
+
 puts "#{one} starts the game"
 
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
 puts 'select an available cell from board'
 number = gets.chomp.to_i
-until board.include?(number)
+
+until display_board.include?(number)
   puts 'invalid move. Please enter a number from 1-9'
   number = gets.chomp.to_i
 end
@@ -50,7 +58,8 @@ puts "#{two} Its your turn"
 
 puts 'select an available cell from board'
 number = gets.chomp.to_i
-until board.include?(number)
+
+until display_board.include?(number)
   puts 'invalid move. Please enter a number from 1-9'
   number = gets.chomp.to_i
 end

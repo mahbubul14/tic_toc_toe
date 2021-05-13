@@ -58,10 +58,10 @@ i = 9
 while i <= 9
   puts box
   puts count = gets.chomp.to_i
-  if ([1, 2, 3].include? count)
+  if [1, 2, 3].include? count
     puts 'Game over!'
     puts "The winner is #{one} !"
-  elsif ([4, 5, 6].include? count)
+  elsif [4, 5, 6].include? count
     puts "The winner is #{two} !"
   else
     puts "It's tie! \n Game over"

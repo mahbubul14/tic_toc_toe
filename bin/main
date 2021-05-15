@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require '../lib/board'
 
+
 puts 'Welcome to Tic Tac Toe games'
 
 puts 'Enter Player 1 name: '
@@ -34,35 +35,70 @@ puts "#{one} will play with x and #{two} with 0"
 puts 'lets start the game!'
 
 
-
 display_board = Game.new
 
-puts display_board.display
+# puts display_board.display
 
-puts "#{one} starts the game"
-
-
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+puts "#{one} starts the game !"
 
 
-puts 'select an available cell from board'
-number = gets.chomp.to_i
+while !display_board.won? || !display_board.tie?
 
-until board.include?(number)
-  puts 'invalid move. Please enter a number from 1-9'
+  puts display_board.display
+  puts "#{one} select an available cell from board"
   number = gets.chomp.to_i
+
+  until display_board.board.include?(number)
+    puts 'invalid move. Please enter a number from 1-9'
+    number = gets.chomp.to_i
+  end
+
+  display_board.count
+  display_board.add_board(number)
+  break if display_board.won? || display_board.tie?
+ 
+
+  puts display_board.display
+  puts "#{two} Its your turn !"
+
+  puts 'select an available cell from board'
+  number = gets.chomp.to_i
+
+  until display_board.board.include?(number)
+    puts 'invalid move. Please enter a number from 1-9'
+    number = gets.chomp.to_i
+  end
+  display_board.count
+  display_board.add_board(number)
+
+  break if display_board.won? || display_board.tie?
+  puts display_board
 end
 
 puts display_board.display
-puts "#{two} Its your turn"
 
-puts 'select an available cell from board'
-number = gets.chomp.to_i
-
-until board.include?(number)
-  puts 'invalid move. Please enter a number from 1-9'
-  number = gets.chomp.to_i
+if display_board.won? && display_board.counter.odd?
+  puts display_board.display
+  puts "#{one} is the winner"
+elsif display_board.won? && display_board.counter.even?
+  puts "#{two won the game}"
+else
+  puts "#{its a tie}"
 end
+
+
+# until 
+#   puts display_board.display.empty?
+#   puts "#{one} You are next" 
+#   number = gets.chomp.to_i
+# end
+
+# until 
+#   puts display_board.display.empty?
+#   puts "#{two} You are next" 
+#   number = gets.chomp.to_i
+# end
+
 
 # i = 9
 # while i <= 9

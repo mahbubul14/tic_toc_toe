@@ -1,6 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Tic Tac Toe
+# Tic Tac Toe Project
+
+A tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns, created with Ruby.
 
 > OOP (Object oriented programming).
 
@@ -25,6 +27,13 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 - Ruby 
 - Code-editor
+
+### Play the game
+After clonning the project, run ./bin/main at the root of the project in the terminal.
+Enter names of two players, first player will play with X and the second with O.
+Players will take turns marking their spots on the board.
+The first player who matches three spots in a horizontal, vertical, or diagonal row. is the winner.
+When the spots on the board are all marked with no matches, then, the game ends in a draw.
 
 ## Authors
 
@@ -54,5 +63,4 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
 

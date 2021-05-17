@@ -3,6 +3,7 @@ require_relative '../lib/game'
 require_relative '../lib/players'
 
 puts 'Welcome to Tic Tac Toe games'
+
 puts 'Enter Player 1 name: '
 one = gets.strip.chomp.capitalize
 if one.empty?

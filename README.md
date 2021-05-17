@@ -4,9 +4,6 @@
 
 A tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns, created with Ruby.
 
-> OOP (Object oriented programming).
-
-In this project we put into practice main concepts of object oriented programming.
 
 ## Built With
 

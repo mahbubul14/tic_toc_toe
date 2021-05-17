@@ -76,7 +76,7 @@ if display_board.won? && display_board.counter.odd?
   puts display_board.display
   puts "#{one} is the winner"
 elsif display_board.won? && display_board.counter.even?
-  puts two won the game.to_s
+  puts "#{two} won the game".to_s
 else
-  puts its a tie.to_s
+  puts "its a tie".to_s
 end

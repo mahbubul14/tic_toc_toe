@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require '../lib/board'
 
-
 puts 'Welcome to Tic Tac Toe games'
 
 puts 'Enter Player 1 name: '
@@ -34,13 +33,11 @@ puts "#{one} will play with x and #{two} with 0"
 
 puts 'lets start the game!'
 
-
 display_board = Game.new
 
 # puts display_board.display
 
 puts "#{one} starts the game !"
-
 
 while !display_board.won? || !display_board.tie?
 
@@ -56,7 +53,6 @@ while !display_board.won? || !display_board.tie?
   display_board.count
   display_board.add_board(number)
   break if display_board.won? || display_board.tie?
- 
 
   puts display_board.display
   puts "#{two} Its your turn !"
@@ -72,6 +68,7 @@ while !display_board.won? || !display_board.tie?
   display_board.add_board(number)
 
   break if display_board.won? || display_board.tie?
+
   puts display_board
 end
 
@@ -81,36 +78,7 @@ if display_board.won? && display_board.counter.odd?
   puts display_board.display
   puts "#{one} is the winner"
 elsif display_board.won? && display_board.counter.even?
-  puts "#{two won the game}"
+  puts two won the game.to_s
 else
-  puts "#{its a tie}"
+  puts its a tie.to_s
 end
-
-
-# until 
-#   puts display_board.display.empty?
-#   puts "#{one} You are next" 
-#   number = gets.chomp.to_i
-# end
-
-# until 
-#   puts display_board.display.empty?
-#   puts "#{two} You are next" 
-#   number = gets.chomp.to_i
-# end
-
-
-# i = 9
-# while i <= 9
-#   puts display_board
-#   puts count = gets.chomp.to_i
-#   if [1, 2, 3].include? count
-#     puts 'Game over!'
-#     puts "The winner is #{one} !"
-#   elsif [4, 5, 6].include? count
-#     puts "The winner is #{two} !"
-#   else
-#     puts "It's tie! \n Game over"
-#   end
-#   i += 1
-# end

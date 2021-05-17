@@ -27,8 +27,6 @@ class Game
      "| #{@board[6]} | #{@board[7]} | #{@board[8]} |",
      '+---+---+---+']
   end
-end
-class Combine
   WIN_COMBINATIONS = [
     [0, 1, 2],
     [3, 4, 5],

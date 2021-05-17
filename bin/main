@@ -3,7 +3,6 @@ require_relative '../lib/game'
 require_relative '../lib/players'
 
 puts 'Welcome to Tic Tac Toe games'
-one = Players.new
 puts 'Enter Player 1 name: '
 one = gets.strip.chomp.capitalize
 if one.empty?
@@ -16,7 +15,6 @@ elsif one.to_i.to_s.eql? one
   puts 'Only text no number:'
   one = gets.chomp
 end
-two = Players.new
 puts 'Enter Player 2 name: '
 two = gets.strip.chomp.capitalize
 if two.empty?

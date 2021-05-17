@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require '../lib/board'
+require_relative '../lib/board'
 
 puts 'Welcome to Tic Tac Toe games'
 
@@ -34,8 +34,6 @@ puts "#{one} will play with x and #{two} with 0"
 puts 'lets start the game!'
 
 display_board = Game.new
-
-# puts display_board.display
 
 puts "#{one} starts the game !"
 

@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+require_relative '../lib/game'
+require_relative '../lib/players'
+
 puts 'Welcome to Tic Tac Toe games'
 
 puts 'Enter Player 1 name: '
@@ -13,7 +16,6 @@ elsif one.to_i.to_s.eql? one
   puts 'Only text no number:'
   one = gets.chomp
 end
-
 puts 'Enter Player 2 name: '
 two = gets.strip.chomp.capitalize
 if two.empty?
@@ -31,40 +33,50 @@ puts "#{one} will play with x and #{two} with 0"
 
 puts 'lets start the game!'
 
-puts box = "+---+---+---+ \n| 1 | 2 | 3 | \n+---+---+---+ \n| 4 | 5 | 6 |
-\n+---+---+---+ \n| 7 | 8 | 9 | \n+---+---+---+ "
+display_board = Game.new
 
-puts "#{one} starts the game"
+puts "#{one} starts the game !"
 
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-puts 'select an available cell from board'
-number = gets.chomp.to_i
-until board.include?(number)
-  puts 'invalid move. Please enter a number from 1-9'
+while !display_board.won? || !display_board.tie?
+
+  puts display_board.display
+  puts "#{one} select an available cell from board"
   number = gets.chomp.to_i
-end
 
-puts box
-puts "#{two} Its your turn"
-
-puts 'select an available cell from board'
-number = gets.chomp.to_i
-until board.include?(number)
-  puts 'invalid move. Please enter a number from 1-9'
-  number = gets.chomp.to_i
-end
-
-i = 9
-while i <= 9
-  puts box
-  puts count = gets.chomp.to_i
-  if [1, 2, 3].include? count
-    puts 'Game over!'
-    puts "The winner is #{one} !"
-  elsif [4, 5, 6].include? count
-    puts "The winner is #{two} !"
-  else
-    puts "It's tie! \n Game over"
+  until display_board.board.include?(number)
+    puts 'invalid move. Please enter a number from 1-9'
+    number = gets.chomp.to_i
   end
-  i += 1
+
+  display_board.count
+  display_board.add_board(number)
+  break if display_board.won? || display_board.tie?
+
+  puts display_board.display
+  puts "#{two} Its your turn !"
+
+  puts 'select an available cell from board'
+  number = gets.chomp.to_i
+
+  until display_board.board.include?(number)
+    puts 'invalid move. Please enter a number from 1-9'
+    number = gets.chomp.to_i
+  end
+  display_board.count
+  display_board.add_board(number)
+
+  break if display_board.won? || display_board.tie?
+
+  puts display_board
+end
+
+puts display_board.display
+
+if display_board.won? && display_board.counter.odd?
+  puts display_board.display
+  puts "#{one} is the winner"
+elsif display_board.won? && display_board.counter.even?
+  puts "#{two} won the game".to_s
+else
+  puts 'its a tie'.to_s
 end

@@ -36,6 +36,7 @@ To get a local copy up and running follow these simple example steps:
 - The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner!
 - When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
+
 ## Author
 
 👤 **Oni Olajumoke Priscilla**

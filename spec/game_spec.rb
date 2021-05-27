@@ -34,4 +34,52 @@ describe Game do
       expect(subject.board).to eq([1, 2, 3, 4, 'O', 6, 7, 8, 9])
     end
   end
+
+  describe '#won?' do
+    it 'checks for  winning combinations and returns nil if game not won' do
+      expect(subject.won?).not_to be true
+    end
+    it 'checks winning combinations for a win' do
+      subject.count
+      subject.add_board(6)
+      subject.count
+      subject.add_board(4)
+      subject.count
+      subject.add_board(3)
+      subject.count
+      subject.add_board(8)
+      subject.count 
+      subject.add_board(9)
+      expect(subject.won?).to be_a(Array)
+      expect(subject.won?).to eql([2, 5, 8])
+    end
+  end
+  describe '#tie?' do
+    it 'returns false if it finds empty cells ' do
+      expect(subject.tie?).to be false
+    end
+    it 'returns true if all games cells are taken' do
+      subject.count
+      subject.add_board(1)
+      subject.count
+      subject.add_board(2)
+      subject.count
+      subject.add_board(3)
+      subject.count
+      subject.add_board(4)
+      subject.count
+      subject.add_board(5)
+      subject.count
+      subject.add_board(6)
+      subject.count
+      subject.add_board(7)
+      subject.count
+      subject.add_board(8)
+      subject.count
+      subject.add_board(9)
+      expect(subject.tie?).to be true
+    end
+  end
+
+
 end

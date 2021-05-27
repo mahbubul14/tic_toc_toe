@@ -19,6 +19,7 @@ To get a local copy up and running follow these simple example steps:
 
 
 ### Install
+- Rspec
 - Ruby 
 - Code-editor
 
@@ -36,6 +37,10 @@ To get a local copy up and running follow these simple example steps:
 - The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner!
 - When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
+### Tests
+- This game uses Rspec Rspec To run the tests:
+- In your terminal, cd into TicTacToe directory and run rspec --init.
+- Then run the files helpers_spec.rb, game_spec.rb and players_spec.rb in the spec folder using ```rspec``` command.
 
 ## Author
 

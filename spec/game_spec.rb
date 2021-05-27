@@ -2,10 +2,10 @@
 require_relative '../lib/game'
 describe Game do
   describe '#initialize' do
-    it 'returns numbers from 1 - 9 ' do
+    it 'returns array of numbers from 1 - 9 ' do
       expect(subject.board).to eql([1, 2, 3, 4, 5, 6, 7, 8, 9])
     end
-    it 'does not return numbers from 1 - 9 ' do
+    it 'does not return array of numbers from 1 - 9 ' do
       expect(subject.board).not_to eql([2, 3, 4, 5, 6, 7, 8, 9])
     end
 
@@ -39,23 +39,23 @@ describe Game do
 
     it 'returns X to  the number on the board' do
       subject.count
-      subject.add_board(2)
-      expect(subject.board).to eql([1, 'X', 3, 4, 5, 6, 7, 8, 9])
+      subject.add_board(5)
+      expect(subject.board).to eql([1, 2, 3, 4, 'X', 6, 7, 8, 9])
     end
     it 'does not return X to  the number on the board' do
       subject.count
-      subject.add_board(2)
-      expect(subject.board).not_to eql([1, 'O', 3, 4, 5, 6, 7, 8, 9])
+      subject.add_board(5)
+      expect(subject.board).not_to eql([1, 2, 3, 4, 'O', 6, 7, 8, 9])
     end
   end
 
   describe '#display' do
     it 'displays board with current moves by players' do
-      subject.add_board(5)
-      expect(subject.board).to eq([1, 2, 3, 4, 'O', 6, 7, 8, 9])
+      subject.add_board(6)
+      expect(subject.board).to eq([1, 2, 3, 4, 5, 'O', 7, 8, 9])
     end
     it 'does not display board with current moves by players' do
-      subject.add_board(5)
+      subject.add_board(6)
       expect(subject.board).not_to eq([1, 2, 3, 4, 5, 6, 7, 8, 9])
     end
   end

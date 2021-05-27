@@ -44,7 +44,7 @@ while !display_board.won? || !display_board.tie?
   number = gets.chomp.to_i
 
   until display_board.board.include?(number)
-    
+
     puts 'invalid move. Please enter a number from 1-9'
     number = gets.chomp.to_i
   end

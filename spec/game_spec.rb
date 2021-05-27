@@ -48,7 +48,7 @@ describe Game do
       subject.add_board(3)
       subject.count
       subject.add_board(8)
-      subject.count 
+      subject.count
       subject.add_board(9)
       expect(subject.won?).to be_a(Array)
       expect(subject.won?).to eql([2, 5, 8])
@@ -80,6 +80,4 @@ describe Game do
       expect(subject.tie?).to be true
     end
   end
-
-
 end
